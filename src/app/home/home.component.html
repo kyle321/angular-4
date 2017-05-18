@@ -1,3 +1,34 @@
-<p>
-  home works!
-</p>
+
+<div class="container">
+  <div class="card">
+    <div class="card-block">
+        <div>
+            <h4 class="card-title success"><a routerLink="/home" routerLinkActive="active">LOGIN </a><h5 style="float: right"><a routerLink="/register" >SIGN UP</a></h5></h4>
+        </div>
+
+      <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)" novalidate>
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" class="form-control" #nameRef="ngModel" name="username" ngModel required minlength="4" maxlength="8" placeholder="Username">
+            <div *ngIf="nameRef.errors && (nameRef.dirty || nameRef.touched)" class="alert alert-danger">
+                <div [hidden]="!nameRef.errors.required">
+                    please the field is required
+                </div>
+                <div [hidden]="!nameRef.errors.minlength">
+                    minimum length is 4
+                </div>
+                <div [hidden]="nameRef.errors.maxlength">
+                    maxmum length is 8
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="formpassword">Password</label>
+          <input type="password" class="form-control" id="formpassword" name="password" ngModel required placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" [disabled]="!loginForm.form.valid"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+      </form>
+    </div>
+  </div>
+</div>
+

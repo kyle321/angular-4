@@ -6,14 +6,19 @@ import {HomeService} from "./home.service";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
-  employee=[];
-    empError=[];
-  constructor(private _homeService:HomeService) { }
+export class HomeComponent  {
+  myName="Mike";
+  onSubmit(value:any) {
+    console.log(value)
 
-  ngOnInit() {
-    this._homeService.getData().subscribe(response=>this.employee=response,
-    errorMsg=>this.empError=errorMsg)
   }
+  //employee=[];
+  //  empError=[];
+  //constructor(private _homeService:HomeService) { }
+  //
+  //ngOnInit() {
+  //  //this._homeService.getData().subscribe(response=>this.employee=response,
+  //  //errorMsg=>this.empError=errorMsg)
+  //}
 
 }
