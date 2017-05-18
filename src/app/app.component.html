@@ -1,3 +1,10 @@
 <h1>
   {{title}}
 </h1>
+<router-outlet></router-outlet>
+<h2>{{errormsg}}</h2>
+<ul *ngFor="let employee of employees">
+  <li>{{employee.fname}}</li>
+  <li>{{employee.sname}}</li>
+  <li>{{employee.gender}}</li>
+</ul>

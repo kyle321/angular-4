@@ -1,0 +1,26 @@
+[
+  {
+    "id":1,
+    "fname":"john",
+    "sname":"kiatu",
+    "gender":"male"
+  },
+  {
+    "id":1,
+    "fname":"catherine",
+    "sname":"johnson",
+    "gender":"female"
+  },
+  {
+    "id":1,
+    "fname":"kyle",
+    "sname":"ramsey",
+    "gender":"male"
+  },
+  {
+    "id":1,
+    "fname":"mercy",
+    "sname":"talyse",
+    "gender":"female"
+  }
+]
